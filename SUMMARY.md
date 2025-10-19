@@ -1,6 +1,7 @@
 timeline
 
 -   2025
+    -   [2025-10-19-Buy-the-Dip](./wealth/2025-10-19-buy-the-dip.md)
     -   [2025-10-04-保持高效](./spirit/maintain-efficiency.md)
     -   [2025-07-02-聊聊工作（一）](./career/think-of-career-01.md)
     -   [2025-06-14-routine](./health/routine/routine.md)
@@ -25,6 +26,7 @@ categories
     -   [第一版锻炼方案](./health/exercise-plan-v1/exercise-plan-v1.md)
     -   [routine](./health/routine/routine.md)
 -   wealth 别人恐惧我贪婪 😈
+    -   [2025-10-19-Buy-the-Dip](./wealth/2025-10-19-buy-the-dip.md)
 
 ---
 
