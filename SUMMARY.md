@@ -26,6 +26,8 @@ categories
     -   [第一版锻炼方案](./health/exercise-plan-v1/exercise-plan-v1.md)
     -   [routine](./health/routine/routine.md)
 -   wealth 别人恐惧我贪婪 😈
+    -   [2025-11-02 别接飞刀](./wealth/2025-11-02-dont-catch-a-falling-knife.md)
+    -   [2025-10-24 持续买入](./wealth/2025-10-24-continue-buying.md)
     -   [2025-10-19-Buy-the-Dip](./wealth/2025-10-19-buy-the-dip.md)
 
 ---
