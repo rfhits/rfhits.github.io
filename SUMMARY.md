@@ -1,6 +1,7 @@
 timeline
 
 -   2025
+    -   [2025-12-14-Blog Summary Generator 使用说明](./generate_summary.md)
     -   [2025-12-14-invest-log-2025-11-19](./wealth/invest-log-2025-11-19.md)
     -   [2025-12-14-invest-log-2025-11-08](./wealth/invest-log-2025-11-08.md)
     -   [2025-11-08-持续买入](./wealth/2025-10-24-continue-buying.md)
@@ -19,24 +20,19 @@ categories
 
 -   [Hello!](./README.md)
 -   nonsense 🤔
-
     -   [梦开始的地方](./nonsense/starts-here.md)
 
 -   health 唱到 100 岁 🎤
-
     -   [第一版锻炼方案](./health/exercise-plan-v1/exercise-plan-v1.md)
     -   [routine](./health/routine/routine.md)
 
 -   spirit 努力追求自己的最好 🏃‍
-
     -   [保持高效](./spirit/maintain-efficiency.md)
 
 -   career 泪水打湿猪脚饭 💧
-
     -   [聊聊工作（一）](./career/think-of-career-01.md)
 
 -   wealth 别人恐惧我贪婪 😈
-
     -   [Buy the Dip](./wealth/2025-10-19-buy-the-dip.md)
     -   [持续买入](./wealth/2025-10-24-continue-buying.md)
     -   [DONOT catch a falling knife](./wealth/2025-11-02-dont-catch-a-falling-knife.md)
@@ -44,6 +40,7 @@ categories
     -   [invest-log-2025-11-19](./wealth/invest-log-2025-11-19.md)
 
 -   未分类 📁
+    -   [Blog Summary Generator 使用说明](./generate_summary.md)
     -   [Hello!](./README.md)
 
 ---
@@ -51,7 +48,6 @@ categories
 tags
 
 -   efficiency
-
     -   [保持高效](./spirit/maintain-efficiency.md)
 
 -   energy
