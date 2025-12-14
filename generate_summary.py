@@ -141,16 +141,12 @@ class BlogSummaryGenerator:
     def validate_metadata(self, metadata, file_path):
         """验证metadata字段"""
         required_fields = ['created', 'published', 'category']
-        optional_fields = ['tags', 'modified']
         
         for field in required_fields:
             if field not in metadata or not metadata[field]:
                 self.errors.append(f"文件 {file_path} 缺少必需字段: {field}")
         
-        # 检查可选字段
-        for field in optional_fields:
-            if field not in metadata:
-                self.warnings.append(f"文件 {file_path} 缺少可选字段: {field}")
+        # 不再对可选字段（tags、modified）进行警告检查
     
     def extract_title(self, lines):
         """提取文章标题"""
@@ -229,20 +225,22 @@ class BlogSummaryGenerator:
         output.append("categories")
         output.append("")
         
-        # 按category分组
+        # 按category分组（只包含有published字段的文章）
         categories = defaultdict(list)
         for article in self.articles:
-            category = article['category'] if article['category'] else '未分类'
-            categories[category].append(article)
+            if article['published']:  # 只包含已发布的文章
+                category = article['category'] if article['category'] else '未分类'
+                categories[category].append(article)
         
         # 定义category的显示名称和emoji
+        # 同时按照该顺序展示文章
         category_display = {
-            'wealth': 'wealth 别人恐惧我贪婪 😈',
-            'spirit': 'spirit 努力追求自己的最好 🏃‍',
+            'nonsense': 'nonsense 🤔',
             'health': 'health 唱到 100 岁 🎤',
-            'career': 'career 泪水打湿猪脚饭 💧',
+            'spirit': 'spirit 努力追求自己的最好 🏃‍',
             'reading': 'reading 爱看书的健健 📕',
-            'nonsense': 'nonsense 🤔'
+            'career': 'career 泪水打湿猪脚饭 💧',
+            'wealth': 'wealth 别人恐惧我贪婪 😈',
         }
         
         # 添加README（如果有）
@@ -250,13 +248,23 @@ class BlogSummaryGenerator:
         if readme_article:
             output.append(f"-   [Hello!](./{readme_article['file_path']})")
         
-        for category in sorted(categories.keys()):
-            display_name = category_display.get(category, f"{category} 📁")
-            output.append(f"-   {display_name}")
-            
-            for article in categories[category]:
-                if 'README.md' in article['file_path']:
-                    continue  # README已经在上面处理了
+        # 按照category_display中定义的顺序展示
+        for category in category_display.keys():
+            if category in categories:
+                display_name = category_display[category]
+                output.append(f"-   {display_name}")
+                
+                for article in categories[category]:
+                    if 'README.md' in article['file_path']:
+                        continue  # README已经在上面处理了
+                    title = article['title']
+                    output.append(f"    -   [{title}](./{article['file_path']})")
+                output.append("")
+        
+        # 处理未分类的文章
+        if '未分类' in categories:
+            output.append(f"-   未分类 📁")
+            for article in categories['未分类']:
                 title = article['title']
                 output.append(f"    -   [{title}](./{article['file_path']})")
             output.append("")
@@ -268,13 +276,14 @@ class BlogSummaryGenerator:
         output.append("tags")
         output.append("")
         
-        # 按tag分组
+        # 按tag分组（只包含有published字段的文章）
         tags = defaultdict(list)
         for article in self.articles:
-            article_tags = article.get('tags', [])
-            if article_tags:
-                for tag in article_tags:
-                    tags[tag].append(article)
+            if article['published']:  # 只包含已发布的文章
+                article_tags = article.get('tags', [])
+                if article_tags:
+                    for tag in article_tags:
+                        tags[tag].append(article)
         
         if tags:
             # 按标签名称排序
