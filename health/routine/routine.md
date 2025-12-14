@@ -1,9 +1,9 @@
 # routine
 
 ```
-v2
-created, 2025-06-14T10:32+08:00
-published, 2025-06-14T10:41+08:00
+v3
+created: 2025-06-14T10:32+08:00
+published: 2025-06-14T10:41+08:00
 category: health
 ```
 

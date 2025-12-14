@@ -1,8 +1,10 @@
 # 持续买入
 
 ```
-v2
-created, 2025-10-24T10:05+08:00
+v3
+created: 2025-10-24T10:05+08:00
+published: 2025-11-08T22:21+08:00
+category: wealth
 ```
 
 周三买了泡泡玛特[^1]，周四几乎跌停 👍
@@ -26,8 +28,7 @@ reading list:
 
 -   [《全市场都在害怕，我却在等一场暴跌，因为有“它”》](https://mp.weixin.qq.com/s/0ktg_3D4-5FH-IDQHiIfNA)
 -   [特斯拉 Robotaxi 重大进展！](https://mp.weixin.qq.com/s/_P-Tajvv_rpD4pQusezlQw)
--   
-
+-
 
 [^1]: [最后的殊死一搏...](https://mp.weixin.qq.com/s/JoxTTXxZyXkirbgsQH1oqw)
 [^2]: [昨天晚上居然还有人砸这个，被我接到一点，挂少了，我还以为砸不下来呢…... -  雪球](https://xueqiu.com/9089343523/357659527)

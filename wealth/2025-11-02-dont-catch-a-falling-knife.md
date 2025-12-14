@@ -1,9 +1,10 @@
 # DONOT catch a falling knife
 
 ```
-v2
-created, 2025-11-02T10:38+08:00
-published, 2025-11-08T10:15+08:00
+v3
+created: 2025-11-02T10:38+08:00
+published: 2025-11-08T10:15+08:00
+category: wealth
 ```
 
 泡泡玛特和小米我真的服了，终于 get 到「不要接飞刀」。

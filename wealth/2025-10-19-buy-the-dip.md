@@ -1,8 +1,9 @@
 # Buy the Dip
 
 ```
-v2
-created, 2025-10-19T16:46+08:00
+v3
+created: 2025-10-19T16:46+08:00
+published: 2025-10-19T19:48+08:00
 category: wealth
 ```
 

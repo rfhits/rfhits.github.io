@@ -1,8 +1,9 @@
 # 保持高效
 
 ```
-created, 2025-09-17T20:59+08:00
-published, 2025-10-04T10:32+08:00
+v3
+created: 2025-09-17T20:59+08:00
+published: 2025-10-04T10:32+08:00
 category: spirit
 tags: energy, efficiency
 ```
