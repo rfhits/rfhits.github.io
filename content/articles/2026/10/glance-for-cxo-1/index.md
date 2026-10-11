@@ -1,13 +1,19 @@
 ---
-title: 医药行业概念剖析
-slug: 医药行业概念
+title: glance-for-cxo-1
+slug: glance-for-cxo-1
 created: 2026-10-07T11:59:14+08:00
 published: 2026-10-11T20:53:45+08:00
-categories: [investing]
-tags: [医药行业, GLP-1, ADC, CRO, CDMO]
+categories:
+  - investing
+tags:
+  - CXO
+  - GLP-1
+  - ADC
+  - CRO
+  - CDMO
 ---
 
-# 医药行业概念剖析
+# CXO 行业概念理解（1）
 
 这篇文章沿着七个问题展开：
 
