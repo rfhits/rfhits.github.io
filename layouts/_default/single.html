@@ -1,0 +1,9 @@
+{{ define "main" }}
+<article class="article">
+  {{ .Content }}
+  <div class="article-taxonomy">
+    {{ with .GetTerms "categories" }}<span>分类：{{ range $index, $term := . }}{{ if $index }}、{{ end }}<a href="{{ $term.RelPermalink }}">{{ $term.LinkTitle }}</a>{{ end }}</span>{{ end }}
+    {{ with .GetTerms "tags" }}<span>标签：{{ range $index, $term := . }}{{ if $index }}、{{ end }}<a href="{{ $term.RelPermalink }}">{{ $term.LinkTitle }}</a>{{ end }}</span>{{ end }}
+  </div>
+</article>
+{{ end }}

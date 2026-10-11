@@ -1,0 +1,12 @@
+[
+{{- $pages := where site.RegularPages "Section" "articles" -}}
+{{- range $index, $page := $pages.ByDate.Reverse }}{{ if $index }},{{ end }}
+  {
+    "title": {{ $page.Title | jsonify }},
+    "url": {{ $page.RelPermalink | jsonify }},
+    "created": {{ $page.Date.Format "2006-01-02" | jsonify }},
+    "categories": {{ $page.Params.categories | default slice | jsonify }},
+    "tags": {{ $page.Params.tags | default slice | jsonify }}
+  }
+{{- end }}
+]

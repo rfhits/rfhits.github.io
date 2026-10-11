@@ -1,0 +1,25 @@
+baseURL: https://rfhits.github.io/
+locale: zh-CN
+title: rfhits 的博客
+enableRobotsTXT: true
+
+frontmatter:
+  date: [created]
+  publishDate: [published]
+  lastmod: [modified, created]
+
+permalinks:
+  page:
+    articles: /:year/:month/:day/:slug/
+
+taxonomies:
+  category: categories
+  tag: tags
+
+outputs:
+  home: [html, rss, json]
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

@@ -1,0 +1,6 @@
+{{ $contact := os.ReadFile "CONTACT.md" }}
+{{ if strings.TrimSpace $contact }}
+<footer class="contact-card">
+  {{ $contact | markdownify }}
+</footer>
+{{ end }}

@@ -1,0 +1,6 @@
+{{ define "main" }}
+<h1>{{ site.Title }}</h1>
+<p>这里记录我的阅读、思考与投资研究。</p>
+<h2>最近文章</h2>
+{{ partial "article-list.html" (where site.RegularPages "Section" "articles") }}
+{{ end }}

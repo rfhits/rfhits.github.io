@@ -1,0 +1,29 @@
+<aside class="sidebar">
+  <details open>
+    <summary>文章导航</summary>
+    {{ if and .IsPage (eq .Section "articles") }}
+    <section class="sidebar-toc">
+      <div class="sidebar-heading">本文目录</div>
+      {{ .TableOfContents }}
+    </section>
+    {{ end }}
+
+    <section class="timeline">
+      <div class="sidebar-heading">发布时间线</div>
+      {{ $articles := where site.RegularPages "Section" "articles" }}
+      {{ range ($articles.ByPublishDate.Reverse).GroupByPublishDate "2006" }}
+      <div class="timeline-year">{{ .Key }}</div>
+        {{ range (.Pages.ByPublishDate.Reverse).GroupByPublishDate "01" }}
+        <div class="timeline-month">{{ .Key }} 月</div>
+        <ul>
+          {{ range .Pages.ByPublishDate.Reverse }}
+          <li class="{{ if eq .RelPermalink $.RelPermalink }}active{{ end }}">
+            <a href="{{ .RelPermalink }}"><time>{{ .PublishDate.Format "01-02" }}</time>{{ .Title }}</a>
+          </li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      {{ end }}
+    </section>
+  </details>
+</aside>

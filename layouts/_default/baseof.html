@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}rfhits 的博客{{ end }}">
+  {{ $style := resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+  <link rel="alternate" type="application/rss+xml" href="{{ "index.xml" | relURL }}" title="{{ site.Title }}">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-name" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+    <nav aria-label="主导航">
+      <a href="{{ site.Home.RelPermalink }}">首页</a>
+      <a href="{{ (site.GetPage "/articles").RelPermalink }}">文章</a>
+      <a href="{{ (site.GetPage "/categories").RelPermalink }}">分类</a>
+      <a href="{{ (site.GetPage "/tags").RelPermalink }}">标签</a>
+      <a href="{{ (site.GetPage "/search").RelPermalink }}">搜索</a>
+    </nav>
+  </header>
+  <div class="site-body">
+    {{ partial "sidebar.html" . }}
+    <div class="content-column">
+      <main class="page">
+        {{ block "main" . }}{{ end }}
+      </main>
+      {{ partial "contact.html" . }}
+    </div>
+  </div>
+</body>
+</html>

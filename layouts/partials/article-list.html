@@ -1,0 +1,9 @@
+<div class="article-list">
+  {{ range .ByDate.Reverse }}
+  <article>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    {{ with .Summary }}<p>{{ . | plainify | truncate 120 }}</p>{{ end }}
+  </article>
+  {{ end }}
+</div>

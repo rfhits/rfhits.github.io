@@ -1,0 +1,10 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<input id="search-input" class="search-input" type="search" placeholder="搜索标题、分类或标签">
+<div id="category-filters" class="filters"></div>
+<div id="tag-filters" class="filters"></div>
+<p id="search-summary"></p>
+<div id="search-results" class="article-list"></div>
+{{ $script := resources.Get "js/search.js" | minify | fingerprint }}
+<script src="{{ $script.RelPermalink }}" defer></script>
+{{ end }}
