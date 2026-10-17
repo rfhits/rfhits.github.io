@@ -26,6 +26,10 @@ nav { display: flex; flex-wrap: wrap; gap: 18px; }
 .content-column { min-width: 0; }
 .page, .contact-card { width: 100%; padding: 40px 0; }
 .article img { max-width: 100%; height: auto; }
+.article table { width: 100%; margin: 24px 0; border-collapse: collapse; }
+.article th, .article td { padding: 8px 12px; border: 1px solid #d8dee4; vertical-align: top; }
+.article th { background: #f6f8fa; }
+.article code, .article pre { font-family: Consolas, "Courier New", monospace; }
 .article blockquote { margin-left: 0; padding-left: 18px; border-left: 3px solid #b9c6bf; color: #52606d; }
 .article-taxonomy { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 48px; color: #66717d; }
 
