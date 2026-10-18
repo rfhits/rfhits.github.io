@@ -1,0 +1,6 @@
+{{- $href := .Destination -}}
+{{- $url := urls.Parse .Destination -}}
+{{- if and (not $url.IsAbs) (strings.HasSuffix $url.Path ".md") -}}
+  {{- $href = ref .Page .Destination -}}
+{{- end -}}
+<a href="{{ $href | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if not (strings.HasPrefix .Destination "#") }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Text | safeHTML }}</a>
