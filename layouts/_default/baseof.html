@@ -29,5 +29,8 @@
       {{ partial "contact.html" . }}
     </div>
   </div>
+  {{ partial "back-to-top.html" . }}
+  {{ $navigation := resources.Get "js/navigation.js" | minify | fingerprint }}
+  <script src="{{ $navigation.RelPermalink }}" defer></script>
 </body>
 </html>

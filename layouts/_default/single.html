@@ -1,9 +1,17 @@
 {{ define "main" }}
 <article class="article">
+  <header class="article-header">
+    <h1 class="article-title">{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="article-subtitle">{{ . }}</p>{{ end }}
+    {{ $categories := .GetTerms "categories" }}
+    {{ $tags := .GetTerms "tags" }}
+    {{ if or $categories $tags }}
+    <div class="article-taxonomy">
+      {{ with $categories }}<span>分类：{{ range $index, $term := . }}{{ if $index }}、{{ end }}<a href="{{ $term.RelPermalink }}">{{ $term.LinkTitle }}</a>{{ end }}</span>{{ end }}
+      {{ with $tags }}<span>标签：{{ range $index, $term := . }}{{ if $index }}、{{ end }}<a href="{{ $term.RelPermalink }}">{{ $term.LinkTitle }}</a>{{ end }}</span>{{ end }}
+    </div>
+    {{ end }}
+  </header>
   {{ .Content }}
-  <div class="article-taxonomy">
-    {{ with .GetTerms "categories" }}<span>分类：{{ range $index, $term := . }}{{ if $index }}、{{ end }}<a href="{{ $term.RelPermalink }}">{{ $term.LinkTitle }}</a>{{ end }}</span>{{ end }}
-    {{ with .GetTerms "tags" }}<span>标签：{{ range $index, $term := . }}{{ if $index }}、{{ end }}<a href="{{ $term.RelPermalink }}">{{ $term.LinkTitle }}</a>{{ end }}</span>{{ end }}
-  </div>
 </article>
 {{ end }}
