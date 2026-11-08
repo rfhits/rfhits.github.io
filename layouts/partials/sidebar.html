@@ -2,10 +2,10 @@
   <details open>
     <summary>文章导航</summary>
     {{ if and .IsPage (eq .Section "articles") }}
-    <section class="sidebar-toc">
-      <div class="sidebar-heading">本文目录</div>
+    <details class="sidebar-toc" open>
+      <summary class="sidebar-heading">本文目录</summary>
       {{ .TableOfContents }}
-    </section>
+    </details>
     {{ end }}
 
     <section class="timeline">

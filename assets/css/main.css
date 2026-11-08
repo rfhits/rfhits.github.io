@@ -75,6 +75,7 @@ nav { display: flex; flex-wrap: wrap; gap: 18px; }
 .sidebar summary { display: none; cursor: pointer; font-weight: 650; }
 .sidebar-heading { margin: 0 0 10px; color: #273444; font-size: 14px; font-weight: 650; }
 .sidebar-toc { margin-bottom: 28px; }
+.sidebar-toc > summary { display: list-item; }
 .sidebar-toc nav > ul { margin: 0; padding-left: 0; }
 .sidebar-toc ul { padding-left: 18px; list-style: none; }
 .sidebar-toc li { margin: 5px 0; }
