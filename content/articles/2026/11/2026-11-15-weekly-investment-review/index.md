@@ -1,4 +1,6 @@
 ---
+title: 2026-11-14 周投资复盘
+slug: 2026-11-15-weekly-investment-review
 created: 2026-11-14T12:23:00+08:00
 published: 2026-11-14T19:45:00+08:00
 categories: [investing]
